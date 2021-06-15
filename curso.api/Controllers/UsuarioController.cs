@@ -46,8 +46,8 @@ namespace curso.api.Controllers
             {
                 Subject = new ClaimsIdentity(new Claim[] {
 
-                    new Claim(ClaimTypes.NamesIdentifier, usuarioViewModelOutput.Codigo.ToString()),
-                    new Claim(ClaimTypes.Name, usuarioViewModelOutput.Name.ToString()),
+                    new Claim(ClaimTypes.NameIdentifier, usuarioViewModelOutput.Codigo.ToString()),
+                    new Claim(ClaimTypes.Name, usuarioViewModelOutput.Login.ToString()),
                     new Claim(ClaimTypes.Email, usuarioViewModelOutput.Email.ToString())
 
                 }),
@@ -65,6 +65,7 @@ namespace curso.api.Controllers
             {
                 Token = token,
                Usuario = usuarioViewModelOutput
+
             });
         }
 
