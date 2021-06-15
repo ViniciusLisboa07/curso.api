@@ -4,5 +4,11 @@
         <name>curso.api</name>
     </assembly>
     <members>
+        <member name="M:curso.api.Controllers.CursoController.Get">
+            <summary>
+            Este serviço permite obter todos os cursos ativos do usuário.
+            </summary>
+            <returns>Retorna status ok e dados do curso do usuário</returns>
+        </member>
     </members>
 </doc>
