@@ -16,10 +16,12 @@ namespace curso.api.Controllers
     [Authorize]
     public class CursoController : ControllerBase
     {
+
         [SwaggerResponse(statusCode: 201, description: "Sucesso ao cadastrar", Type = typeof(CursoViewModelInput))]
         [SwaggerResponse(statusCode: 401, description: "Não autorizado")]
         [HttpPost]
         [Route("")]
+
         public async Task<IActionResult> Post(CursoViewModelInput cursoViewModelInput)
         {
             var codigoUsuario = int.Parse(User.FindFirst(c => c.Type == ClaimTypes.NameIdentifier)?.Value);
